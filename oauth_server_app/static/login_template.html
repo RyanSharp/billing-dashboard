@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Allow Application API Access</title>
+    <style rel="stylesheet">
+    .page-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #fafafa;
+        box-sizing: border-box;
+        padding: 100px;
+        font-size: 10px;
+    }
+    .page-header {
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .rendered-input {
+        width: calc(50% - 20px);
+        margin: 10px;
+        float: left;
+    }
+    .form-submit {
+        width: 200px;
+        margin:  0 auto;
+        text-align: center;
+        font-size: 1.4em;
+    }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="page-header">Allow Access to Billing Console</div>
+        <div class="form-container">
+            <form method="POST" action="/oauth/new" enctype="multipart/form-data">
+                <input class="rendered-input" type="text" name="username" placeholder="Email Address">
+                <input class="rendered-input" type="password" name="password" placeholder="Password">
+                <input type="hidden" name"redirect_uri" value="{{redirect_uri}}">
+                <input type="hidden" name="app_identity" value="{{app_identity}}">
+                <input type="hidden" name="csrf_token" value="{{csrf_token}}">
+                <input class="form-submit" type="submit" value="Allow Access">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

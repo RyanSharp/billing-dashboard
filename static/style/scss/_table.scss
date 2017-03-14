@@ -1,0 +1,44 @@
+.table-container {
+    width: 100%;
+}
+
+.table-header {
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    >div {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}
+
+.table-row {
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    >div {
+        padding: 5px 10px;
+        box-sizing: border-box;
+    }
+}
+
+.tiny {
+    width: 20px;
+}
+ .small {
+     width: 40px;
+ }
+
+ .medium {
+     width: 60px;
+ }
+
+ .large {
+     width: 100px;
+ }
+
+ .extra-large {
+     width: 150px;
+ }
