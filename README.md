@@ -1,6 +1,6 @@
 # Billing Dashboard
 ## What is this
-This is currently very much in progress.  At a time, I had a number of applications that required the handling of invoicing and payment operations, so this was born out of a desire to unify that process with a single platform and oauth connections.
+This is currently very much in progress.  At the time, I had a number of applications that required the handling of invoicing and payment operations, so this was born out of a desire to unify that process with a single platform and oauth connections.
 
 ## How it works
 The application is built with a node/express/mongo backend and a reactjs frontend.  It is a very simple application for handling the creation of new invoices, passing those invoices onto the client, and for now, connecting with paypal as the primary payment processor.
