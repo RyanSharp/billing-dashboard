@@ -8,7 +8,7 @@ class Dashboard extends React.Component {
          * for handling state changes using the hash of the URL
          * App state is handled on this react element.
          */
-        var a = document.createELement("a");
+        var a = document.createElement("a");
         window.onhashchange = function(e) {
             var hash, query, hashPath;
             a.setAttribute("href", window.location.href);

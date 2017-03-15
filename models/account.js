@@ -5,9 +5,10 @@ var payments = require("./pending");
 
 function Account(options) {
     options = options || {};
-    if (!options.billingId || !options.credit)
+    if (!options.billingId || !options.credit || !options.clientId)
         throw "Missing required fields";
     this.billingId = options.billingId;
+    this.clientId = options.clientId;
     this.credit = options.credit || 0;
     this._id = options._id;
     if (!this._id) {
@@ -42,6 +43,7 @@ Account.prototype.applyCredit = function(PendingPayment, amount, resolve) {
 }
 
 Account.serializeConfig = [
+    "clientId",
     "billingId",
     "credit",
 ];
